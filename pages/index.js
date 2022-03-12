@@ -1,12 +1,18 @@
 import Head from "next/head";
 import Header from "../components/header";
+import Carousel from "../components/carousel";
+import Footer from "../components/footer";
 import styled from "styled-components";
+import useMedia from "use-media";
+import { BREAKPOINTS } from "../components/constants";
 
 const PageWrapper = styled.div`
-  background-color: #24261f;
+  background-color: #000000;
   min-height: 100vh;
   min-width: 100vw;
 `;
+
+const CarouselWrapper = styled.div``;
 
 export default function Home() {
   return (
@@ -19,6 +25,10 @@ export default function Home() {
       <main>
         <PageWrapper>
           <Header />
+          {/* <CarouselWrapper>
+            <Carousel />
+          </CarouselWrapper> */}
+          {useMedia({ maxWidth: BREAKPOINTS.large }) ? <Footer /> : null}
         </PageWrapper>
       </main>
     </>

@@ -1,22 +1,15 @@
 import styled from "styled-components";
-import {
-  AppleMusic,
-  Facebook,
-  Instagram,
-  Spotify,
-  Tiktok,
-  Youtube,
-} from "./socials";
+import useMedia from "use-media";
+import SocialIconBlock from "./socialIconBlock";
 
-// Header wrapper and container styles
-const HeaderWrapper = styled.div`
+// Large (desktop-ish) wrapper and container styles
+const LargeHeaderWrapper = styled.div`
   display: flex;
-  flex-wrap: wrap;
   padding-top: 10px;
   padding-bottom: 20px;
 `;
 
-const HeaderSectionEmail = styled.div`
+const LargeHeaderSectionEmail = styled.div`
   justify-content: left;
   align-items: top;
   display: flex;
@@ -25,21 +18,42 @@ const HeaderSectionEmail = styled.div`
   min-width: 270px;
 `;
 
-const HeaderSectionLogo = styled.div`
+const LargeHeaderSectionLogo = styled.div`
   justify-content: center;
   align-items: center;
   display: flex;
   width: calc(100% / 3);
-  min-width: 372px;
+  min-width: 310px;
 `;
 
-const HeaderSectionSocials = styled.div`
+const LargeHeaderSectionSocials = styled.div`
   justify-content: right;
   align-items: top;
   display: flex;
   width: calc(100% / 3);
   padding-right: 20px;
-  min-width: 322px;
+  min-width: 310px;
+`;
+
+// Small (mobile-ish) wrapper and container styles
+const SmallHeaderWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-bottom: 20px;
+`;
+
+const SmallHeaderSectionLogo = styled.div`
+  justify-content: center;
+  align-items: center;
+  display: flex;
+`;
+
+const SmallHeaderSectionSocials = styled.div`
+  justify-content: center;
+  align-items: middle;
+  display: flex;
+  margin-top: 10px;
 `;
 
 // Header content styles
@@ -51,55 +65,39 @@ const Email = styled.h2`
 `;
 
 const Name = styled.h1`
-  font-size: 60px;
+  font-size: 48px;
   color: #e8f7cb;
   font-family: "Permanent Marker", cursive;
   margin: 0;
 `;
 
-const IconWrapper = styled.div`
-  padding-left: 7px;
-  padding-right: 7px;
-`;
-
 export default function Header() {
+  const iconSize = useMedia({ minWidth: "930px" }) ? "30px" : "20px";
+
   return (
-    <HeaderWrapper>
-      <HeaderSectionEmail>
-        <Email>jonnyglennmgmt@gmail.com</Email>
-      </HeaderSectionEmail>
-      <HeaderSectionLogo>
-        <Name>Jonny Glenn</Name>
-      </HeaderSectionLogo>
-      <HeaderSectionSocials>
-        <IconWrapper>
-          <AppleMusic
-            link="https://music.apple.com/us/artist/jonny-glenn/1175215184"
-            size="35px"
-          />
-        </IconWrapper>
-        <IconWrapper>
-          <Facebook link="https://www.facebook.com/JonnyGlenn/" size="35px" />
-        </IconWrapper>
-        <IconWrapper>
-          <Instagram
-            link="https://www.instagram.com/jonny_glenn/"
-            size="35px"
-          />
-        </IconWrapper>
-        <IconWrapper>
-          <Spotify
-            link="https://open.spotify.com/artist/5Q7RuKEXTvVcowRVcQt4su"
-            size="35px"
-          />
-        </IconWrapper>
-        <IconWrapper>
-          <Tiktok link="https://www.tiktok.com/@jonnyglenn" size="35px" />
-        </IconWrapper>
-        <IconWrapper>
-          <Youtube link="https://www.youtube.com/c/JonnyGlenn" size="35px" />
-        </IconWrapper>
-      </HeaderSectionSocials>
-    </HeaderWrapper>
+    <>
+      {useMedia({ minWidth: "930px" }) ? (
+        <LargeHeaderWrapper>
+          <LargeHeaderSectionEmail>
+            <Email>jonnyglennmgmt@gmail.com</Email>
+          </LargeHeaderSectionEmail>
+          <LargeHeaderSectionLogo>
+            <Name>Jonny Glenn</Name>
+          </LargeHeaderSectionLogo>
+          <LargeHeaderSectionSocials>
+            <SocialIconBlock iconSize={iconSize} />
+          </LargeHeaderSectionSocials>
+        </LargeHeaderWrapper>
+      ) : (
+        <SmallHeaderWrapper>
+          <SmallHeaderSectionLogo>
+            <Name>Jonny Glenn</Name>
+          </SmallHeaderSectionLogo>
+          <SmallHeaderSectionSocials>
+            <SocialIconBlock iconSize={iconSize} />
+          </SmallHeaderSectionSocials>
+        </SmallHeaderWrapper>
+      )}
+    </>
   );
 }
