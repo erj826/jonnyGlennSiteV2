@@ -3,7 +3,7 @@ import Header from "../components/header";
 import styled from "styled-components";
 
 const PageWrapper = styled.div`
-  background-color: #24261f;
+  background-color: #000000;
   min-height: 100vh;
   min-width: 100vw;
 `;

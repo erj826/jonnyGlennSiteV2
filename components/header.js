@@ -30,7 +30,7 @@ const HeaderSectionLogo = styled.div`
   align-items: center;
   display: flex;
   width: calc(100% / 3);
-  min-width: 372px;
+  min-width: 310px;
 `;
 
 const HeaderSectionSocials = styled.div`
@@ -51,7 +51,7 @@ const Email = styled.h2`
 `;
 
 const Name = styled.h1`
-  font-size: 60px;
+  font-size: 48px;
   color: #e8f7cb;
   font-family: "Permanent Marker", cursive;
   margin: 0;
@@ -73,31 +73,31 @@ export default function Header() {
       </HeaderSectionLogo>
       <HeaderSectionSocials>
         <IconWrapper>
-          <AppleMusic
-            link="https://music.apple.com/us/artist/jonny-glenn/1175215184"
-            size="35px"
-          />
-        </IconWrapper>
-        <IconWrapper>
-          <Facebook link="https://www.facebook.com/JonnyGlenn/" size="35px" />
+          <Facebook link="https://www.facebook.com/JonnyGlenn/" size="30px" />
         </IconWrapper>
         <IconWrapper>
           <Instagram
             link="https://www.instagram.com/jonny_glenn/"
-            size="35px"
+            size="30px"
           />
+        </IconWrapper>
+        <IconWrapper>
+          <Tiktok link="https://www.tiktok.com/@jonnyglenn" size="30px" />
+        </IconWrapper>
+        <IconWrapper>
+          <Youtube link="https://www.youtube.com/c/JonnyGlenn" size="30px" />
         </IconWrapper>
         <IconWrapper>
           <Spotify
             link="https://open.spotify.com/artist/5Q7RuKEXTvVcowRVcQt4su"
-            size="35px"
+            size="30px"
           />
         </IconWrapper>
         <IconWrapper>
-          <Tiktok link="https://www.tiktok.com/@jonnyglenn" size="35px" />
-        </IconWrapper>
-        <IconWrapper>
-          <Youtube link="https://www.youtube.com/c/JonnyGlenn" size="35px" />
+          <AppleMusic
+            link="https://music.apple.com/us/artist/jonny-glenn/1175215184"
+            size="30px"
+          />
         </IconWrapper>
       </HeaderSectionSocials>
     </HeaderWrapper>
