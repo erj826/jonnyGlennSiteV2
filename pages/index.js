@@ -4,7 +4,7 @@ import useMedia from "use-media";
 import Header from "../components/header";
 import Carousel from "../components/carousel";
 import Footer from "../components/footer";
-import { BREAKPOINTS } from "../components/constants";
+import { BREAKPOINTS, NAME } from "../components/constants";
 
 const PageWrapper = styled.div`
   height: 100vh;
@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Jonny Glenn</title>
+        <title>{NAME}</title>
         <meta name="description" content="Musician Jonny Glenn" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

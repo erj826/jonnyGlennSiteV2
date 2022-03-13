@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import useMedia from "use-media";
 import SocialIconBlock from "./socialIconBlock";
+import { NAME, EMAIL } from "./constants";
 
 // Large (desktop-ish) wrapper and container styles
 const LargeHeaderWrapper = styled.div`
@@ -66,10 +67,10 @@ export default function Header() {
       {useMedia({ minWidth: "930px" }) ? (
         <LargeHeaderWrapper>
           <LargeHeaderSectionEmail>
-            <Email>jonnyglennmgmt@gmail.com</Email>
+            <Email>{EMAIL}</Email>
           </LargeHeaderSectionEmail>
           <LargeHeaderSectionLogo>
-            <Name>Jonny Glenn</Name>
+            <Name>{NAME}</Name>
           </LargeHeaderSectionLogo>
           <LargeHeaderSectionSocials>
             <SocialIconBlock iconSize={iconSize} />
@@ -78,7 +79,7 @@ export default function Header() {
       ) : (
         <SmallHeaderWrapper>
           <SmallHeaderSectionLogo>
-            <Name>Jonny Glenn</Name>
+            <Name>{NAME}</Name>
           </SmallHeaderSectionLogo>
           <SmallHeaderSectionSocials>
             <SocialIconBlock iconSize={iconSize} />
