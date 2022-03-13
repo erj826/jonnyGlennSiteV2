@@ -31,13 +31,49 @@ const ImageContainer = styled.div`
 `;
 
 export default function Carousel() {
-  const IMAGES = [img1, img2, img3, img4, img5];
+  const IMAGES = [
+    <Image
+      src="/assets/jonny1.jpg"
+      alt="Concert"
+      height="2624"
+      width="3936"
+      key="1"
+    />,
+    <Image
+      src="/assets/jonny2.jpg"
+      alt="Concert"
+      height="2624"
+      width="3936"
+      key="2"
+    />,
+    <Image
+      src="/assets/jonny3.jpg"
+      alt="Concert"
+      height="2624"
+      width="3936"
+      key="3"
+    />,
+    <Image
+      src="/assets/jonny4.jpg"
+      alt="Concert"
+      height="2624"
+      width="3936"
+      key="4"
+    />,
+    <Image
+      src="/assets/jonny5.jpg"
+      alt="Concert"
+      height="2624"
+      width="3936"
+      key="5"
+    />,
+  ];
+
   const img = IMAGES[Math.floor(Math.random() * IMAGES.length)];
+
   return (
     <CarouselContainer>
-      <ImageContainer>
-        <Image src={img} alt="Concert" />
-      </ImageContainer>
+      <ImageContainer>{img}</ImageContainer>
     </CarouselContainer>
   );
 }
