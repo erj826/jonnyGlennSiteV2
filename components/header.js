@@ -10,29 +10,26 @@ const LargeHeaderWrapper = styled.div`
 `;
 
 const LargeHeaderSectionEmail = styled.div`
+  display: flex;
   justify-content: left;
   align-items: top;
-  display: flex;
   width: calc(100% / 3);
   padding-left: 20px;
-  min-width: 270px;
 `;
 
 const LargeHeaderSectionLogo = styled.div`
-  justify-content: center;
-  align-items: center;
-  display: flex;
+display: flex;
+justify-content: left;
+align-items: top;
   width: calc(100% / 3);
-  min-width: 310px;
 `;
 
 const LargeHeaderSectionSocials = styled.div`
-  justify-content: right;
-  align-items: top;
-  display: flex;
+display: flex;
+justify-content: left;
+align-items: top;
   width: calc(100% / 3);
   padding-right: 20px;
-  min-width: 310px;
 `;
 
 // Small (mobile-ish) wrapper and container styles
@@ -44,9 +41,9 @@ const SmallHeaderWrapper = styled.div`
 `;
 
 const SmallHeaderSectionLogo = styled.div`
-  justify-content: center;
-  align-items: center;
-  display: flex;
+display: flex;
+justify-content: left;
+align-items: top;
 `;
 
 const SmallHeaderSectionSocials = styled.div`
