@@ -24,7 +24,9 @@ export default function Home() {
         <header>
           <Header />
         </header>
-        <main>{/* <Carousel /> */}</main>
+        <main>
+          <Carousel />
+        </main>
         {useMedia({ maxWidth: BREAKPOINTS.large }) ? (
           <footer>
             <Footer />

@@ -1,5 +1,6 @@
 const BREAKPOINTS = {
-  medium: "630px",
+  medium: "580px",
+  medium2: "750px",
   large: "930px",
 };
 
