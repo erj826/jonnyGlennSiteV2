@@ -6,7 +6,7 @@ import SocialIconBlock from "./socialIconBlock";
 const LargeHeaderWrapper = styled.div`
   display: flex;
   padding-top: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 `;
 
 const LargeHeaderSectionEmail = styled.div`
@@ -40,7 +40,7 @@ const SmallHeaderWrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 `;
 
 const SmallHeaderSectionLogo = styled.div`
