@@ -6,6 +6,21 @@ body {
   background-color: black;
 }
 
+h1,
+h2 {
+  color: #e8f7cb;
+}
+
+h1 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 48px;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+
 * {
   box-sizing: border-box;
 }
