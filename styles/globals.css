@@ -2,11 +2,23 @@ html,
 body {
   padding: 0;
   margin: 0;
+  overflow: hidden;
+  background-color: black;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+h1,
+h2 {
+  color: #e8f7cb;
+}
+
+h1 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 48px;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
 }
 
 * {

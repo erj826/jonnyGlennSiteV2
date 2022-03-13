@@ -1,73 +1,61 @@
 import styled from "styled-components";
 import useMedia from "use-media";
 import SocialIconBlock from "./socialIconBlock";
+import { NAME, EMAIL } from "./constants";
 
 // Large (desktop-ish) wrapper and container styles
 const LargeHeaderWrapper = styled.div`
   display: flex;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding: 10px 20px 30px;
 `;
 
 const LargeHeaderSectionEmail = styled.div`
+  display: flex;
   justify-content: left;
   align-items: top;
-  display: flex;
   width: calc(100% / 3);
-  padding-left: 20px;
-  min-width: 270px;
 `;
 
 const LargeHeaderSectionLogo = styled.div`
-  justify-content: center;
-  align-items: center;
   display: flex;
+  justify-content: center;
+  align-items: top;
   width: calc(100% / 3);
-  min-width: 310px;
 `;
 
 const LargeHeaderSectionSocials = styled.div`
+  display: flex;
   justify-content: right;
   align-items: top;
-  display: flex;
   width: calc(100% / 3);
-  padding-right: 20px;
-  min-width: 310px;
 `;
 
 // Small (mobile-ish) wrapper and container styles
 const SmallHeaderWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding: 15px 0px;
 `;
 
 const SmallHeaderSectionLogo = styled.div`
-  justify-content: center;
-  align-items: center;
   display: flex;
+  justify-content: center;
+  align-items: top;
 `;
 
 const SmallHeaderSectionSocials = styled.div`
+  display: flex;
   justify-content: center;
   align-items: middle;
-  display: flex;
   margin-top: 10px;
 `;
 
 // Header content styles
 const Email = styled.h2`
-  font-size: 18px;
-  color: #e8f7cb;
-  font-family: "Poppins", sans-serif;
   margin: 0;
 `;
 
 const Name = styled.h1`
-  font-size: 48px;
-  color: #e8f7cb;
-  font-family: "Permanent Marker", cursive;
   margin: 0;
 `;
 
@@ -79,10 +67,10 @@ export default function Header() {
       {useMedia({ minWidth: "930px" }) ? (
         <LargeHeaderWrapper>
           <LargeHeaderSectionEmail>
-            <Email>jonnyglennmgmt@gmail.com</Email>
+            <Email>{EMAIL}</Email>
           </LargeHeaderSectionEmail>
           <LargeHeaderSectionLogo>
-            <Name>Jonny Glenn</Name>
+            <Name>{NAME}</Name>
           </LargeHeaderSectionLogo>
           <LargeHeaderSectionSocials>
             <SocialIconBlock iconSize={iconSize} />
@@ -91,7 +79,7 @@ export default function Header() {
       ) : (
         <SmallHeaderWrapper>
           <SmallHeaderSectionLogo>
-            <Name>Jonny Glenn</Name>
+            <Name>{NAME}</Name>
           </SmallHeaderSectionLogo>
           <SmallHeaderSectionSocials>
             <SocialIconBlock iconSize={iconSize} />
