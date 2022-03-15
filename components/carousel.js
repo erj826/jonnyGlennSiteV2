@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styled from "styled-components";
 import { BREAKPOINTS } from "./constants";
+import img1 from "../public/jonny1.jpg";
 
 const CarouselContainer = styled.div`
   display: flex;
@@ -25,49 +26,11 @@ const ImageContainer = styled.div`
 `;
 
 export default function Carousel() {
-  const IMAGES = [
-    <Image
-      src="/assets/jonny1.jpg"
-      alt="Concert"
-      height="2624"
-      width="3936"
-      key="1"
-    />,
-    <Image
-      src="/assets/jonny2.jpg"
-      alt="Concert"
-      height="2624"
-      width="3936"
-      key="2"
-    />,
-    <Image
-      src="/assets/jonny3.jpg"
-      alt="Concert"
-      height="2624"
-      width="3936"
-      key="3"
-    />,
-    <Image
-      src="/assets/jonny4.jpg"
-      alt="Concert"
-      height="2624"
-      width="3936"
-      key="4"
-    />,
-    <Image
-      src="/assets/jonny5.jpg"
-      alt="Concert"
-      height="2624"
-      width="3936"
-      key="5"
-    />,
-  ];
-
-  const img = IMAGES[Math.floor(Math.random() * IMAGES.length)];
-
   return (
     <CarouselContainer>
-      <ImageContainer>{img}</ImageContainer>
+      <ImageContainer>
+        <Image src={img1} />
+      </ImageContainer>
     </CarouselContainer>
   );
 }
