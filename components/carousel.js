@@ -46,11 +46,11 @@ const Slide = styled.div`
 `;
 
 const Slide1 = styled(Slide)`
-  animation-delay: 0s;
+  animation-delay: 32s;
 `;
 
 const Slide2 = styled(Slide)`
-  animation-delay: 8s;
+  animation-delay: 24s;
 `;
 
 const Slide3 = styled(Slide)`
@@ -58,11 +58,11 @@ const Slide3 = styled(Slide)`
 `;
 
 const Slide4 = styled(Slide)`
-  animation-delay: 24s;
+  animation-delay: 8s;
 `;
 
 const Slide5 = styled(Slide)`
-  animation-delay: 32s;
+  animation-delay: 0s;
 `;
 
 export default function Carousel() {
