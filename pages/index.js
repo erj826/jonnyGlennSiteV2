@@ -12,6 +12,14 @@ const PageWrapper = styled.div`
   grid-template-rows: auto 1fr auto;
 `;
 
+const CarouselWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  max-width: 100%;
+`;
+
 export default function Home() {
   return (
     <>
@@ -25,7 +33,9 @@ export default function Home() {
           <Header />
         </header>
         <main>
-          <Carousel />
+          <CarouselWrapper>
+            <Carousel />
+          </CarouselWrapper>
         </main>
         {useMedia({ maxWidth: BREAKPOINTS.large }) ? (
           <footer>
