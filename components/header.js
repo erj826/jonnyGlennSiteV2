@@ -34,7 +34,8 @@ const LargeHeaderSectionSocials = styled.div`
 const SmallHeaderWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 15px 0px;
+  padding-top: 15px;
+  padding-bottom: 30px;
 `;
 
 const SmallHeaderSectionLogo = styled.div`
