@@ -1,33 +1,29 @@
 import styled from "styled-components";
 import useMedia from "use-media";
 import SocialIconBlock from "./socialIconBlock";
-import { NAME, EMAIL } from "./constants";
+import { NAME, EMAIL, BREAKPOINTS } from "./constants";
 
-// Large (desktop-ish) wrapper and container styles
 const LargeHeaderWrapper = styled.div`
   display: flex;
   padding: 10px 20px 30px;
 `;
 
-const LargeHeaderSectionEmail = styled.div`
+const LargeBase = styled.div`
   display: flex;
+  align-items: center;
+  width: calc(100% / 3);
+`;
+
+const LargeHeaderSectionEmail = styled(LargeBase)`
   justify-content: left;
-  align-items: top;
-  width: calc(100% / 3);
 `;
 
-const LargeHeaderSectionLogo = styled.div`
-  display: flex;
+const LargeHeaderSectionLogo = styled(LargeBase)`
   justify-content: center;
-  align-items: top;
-  width: calc(100% / 3);
 `;
 
-const LargeHeaderSectionSocials = styled.div`
-  display: flex;
+const LargeHeaderSectionSocials = styled(LargeBase)`
   justify-content: right;
-  align-items: top;
-  width: calc(100% / 3);
 `;
 
 // Small (mobile-ish) wrapper and container styles
@@ -51,27 +47,18 @@ const SmallHeaderSectionSocials = styled.div`
   margin-top: 10px;
 `;
 
-// Header content styles
-const Email = styled.h2`
-  margin: 0;
-`;
-
-const Name = styled.h1`
-  margin: 0;
-`;
-
 export default function Header() {
-  const iconSize = useMedia({ minWidth: "930px" }) ? "30px" : "20px";
+  const iconSize = "18px";
 
   return (
     <>
-      {useMedia({ minWidth: "930px" }) ? (
+      {useMedia({ minWidth: BREAKPOINTS.large }) ? (
         <LargeHeaderWrapper>
           <LargeHeaderSectionEmail>
-            <Email>{EMAIL}</Email>
+            <h2>{EMAIL}</h2>
           </LargeHeaderSectionEmail>
           <LargeHeaderSectionLogo>
-            <Name>{NAME}</Name>
+            <h1>{NAME}</h1>
           </LargeHeaderSectionLogo>
           <LargeHeaderSectionSocials>
             <SocialIconBlock iconSize={iconSize} />
@@ -80,7 +67,7 @@ export default function Header() {
       ) : (
         <SmallHeaderWrapper>
           <SmallHeaderSectionLogo>
-            <Name>{NAME}</Name>
+            <h1>{NAME}</h1>
           </SmallHeaderSectionLogo>
           <SmallHeaderSectionSocials>
             <SocialIconBlock iconSize={iconSize} />

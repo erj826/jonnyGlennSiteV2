@@ -2,7 +2,6 @@ import Head from "next/head";
 import styled from "styled-components";
 import useMedia from "use-media";
 import Header from "../components/header";
-import Carousel from "../components/carousel";
 import Footer from "../components/footer";
 import { BREAKPOINTS, NAME } from "../components/constants";
 
@@ -12,9 +11,17 @@ const PageWrapper = styled.div`
   grid-template-rows: auto 1fr auto;
 `;
 
+const Background = styled.div`
+  background-image: url("background.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+`;
+
 export default function Home() {
   return (
-    <>
+    <Background>
       <Head>
         <title>{NAME}</title>
         <meta name="description" content="Musician Jonny Glenn" />
@@ -24,15 +31,13 @@ export default function Home() {
         <header>
           <Header />
         </header>
-        <main>
-          <Carousel />
-        </main>
+        <main />
         {useMedia({ maxWidth: BREAKPOINTS.large }) ? (
           <footer>
             <Footer />
           </footer>
         ) : null}
       </PageWrapper>
-    </>
+    </Background>
   );
 }
