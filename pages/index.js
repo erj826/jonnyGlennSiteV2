@@ -1,9 +1,11 @@
 import Head from "next/head";
+import Image from "next/image";
 import styled from "styled-components";
 import useMedia from "use-media";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { BREAKPOINTS, NAME } from "../components/constants";
+import album from "../public/cover.png";
 
 const PageWrapper = styled.div`
   height: 100vh;
@@ -19,6 +21,19 @@ const Background = styled.div`
   background-size: cover;
 `;
 
+const Main = styled.main`
+  display: grid;
+  place-items: center;
+  height: 100%;
+  border-radius: 100px;
+`;
+
+const ImageContainer = styled.div`
+  width: 80%;
+  max-height: 375px;
+  max-width: 375px;
+`;
+
 export default function Home() {
   return (
     <Background>
@@ -31,7 +46,17 @@ export default function Home() {
         <header>
           <Header />
         </header>
-        <main></main>
+        <Main>
+          <ImageContainer>
+            <Image
+              alt="Album cover"
+              src={album}
+              layout="responsive"
+              width={100}
+              height={100}
+            />
+          </ImageContainer>
+        </Main>
         {useMedia({ maxWidth: BREAKPOINTS.large }) ? (
           <footer>
             <Footer />
