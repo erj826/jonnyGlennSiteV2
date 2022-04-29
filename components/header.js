@@ -5,7 +5,7 @@ import { NAME, EMAIL, BREAKPOINTS } from "./constants";
 
 const LargeHeaderWrapper = styled.div`
   display: flex;
-  padding: 10px 20px 30px;
+  padding: 10px 20px;
   max-width: 1300px;
   margin: auto;
 `;
