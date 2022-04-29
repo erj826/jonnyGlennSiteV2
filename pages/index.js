@@ -31,9 +31,7 @@ export default function Home() {
         <header>
           <Header />
         </header>
-        <main>
-
-        </main>
+        <main></main>
         {useMedia({ maxWidth: BREAKPOINTS.large }) ? (
           <footer>
             <Footer />
