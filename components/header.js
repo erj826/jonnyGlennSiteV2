@@ -28,12 +28,10 @@ const LargeHeaderSectionSocials = styled(LargeBase)`
   justify-content: right;
 `;
 
-// Small (mobile-ish) wrapper and container styles
 const SmallHeaderWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 15px;
-  padding-bottom: 30px;
+  padding: 15px 0px 30px;
 `;
 
 const SmallHeaderSectionLogo = styled.div`

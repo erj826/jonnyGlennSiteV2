@@ -3,10 +3,8 @@ import { EMAIL } from "./constants";
 
 const FooterCopy = styled.h2`
   text-align: center;
-  margin-bottom: 20px;
-  @media (max-width: 400px) {
-    margin-bottom: 125px;
-  }
+  margin-bottom: 25px;
+  flex-shrink: 0;
 `;
 
 export default function Footer() {
